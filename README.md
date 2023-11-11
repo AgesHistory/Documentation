@@ -1,6 +1,6 @@
-# Documentation de l'API NOM
+# Documentation de l'API AgesHistory
 
-Bienvenue dans la documentation de l'API de NOM. Cette documentation fournit des informations détaillées sur les différentes routes, les paramètres, les en-têtes, les codes d'erreur et les réponses pour chaque endpoint de l'API.
+Bienvenue dans la documentation de l'API de AgesHistory. Cette documentation fournit des informations détaillées sur les différentes routes, les paramètres, les en-têtes, les codes d'erreur et les réponses pour chaque endpoint de l'API.
 
 **API Rest**
 
