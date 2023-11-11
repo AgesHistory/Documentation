@@ -19,7 +19,7 @@ Récupère le profil de l'utilisateur actuellement connecté.
   "username": "john_doe",
   "email": "john@example.com",
   "type_account": "user",
-  "private": false,
+  "private": true,
   "avatar": "avatar_url",
   "bio": "Description de l'utilisateur",
   "badges": ["badge1", "badge2"],
