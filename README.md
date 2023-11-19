@@ -9,7 +9,7 @@ Bienvenue dans la documentation de l'API de AgesHistory. Cette documentation fou
 - [Utilisateurs](./api/Users.md)
   - [Notifications](./api/Notification.md)
   - [Follow](./api/Follow.md)
-  - [Amis](./api/Relationship.md)
+  - [Amis](./api/relationship.md)
   
 - [Forums](./api/forum-features.md)
   - [Topic](./api/forums.md)

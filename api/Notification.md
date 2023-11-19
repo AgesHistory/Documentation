@@ -71,5 +71,6 @@ Récupère une notification lié à vôtre compte actuellement connecté
 	]
 }
 ```
+
 - **Codes d'erreur** :
   - Code `404 Not Found` : Si l'utilisateur n'est pas trouvé.

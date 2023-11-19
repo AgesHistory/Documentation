@@ -107,6 +107,7 @@ Récupère les demandes d'amis de l'utilisateur connecté.
     ]
   }
   ```
+  
 - **Codes d'erreur** :
   - Code `401 Unauthorized` : Si l'utilisateur n'est pas authentifié.
   - Code `500 Internal Server Error` : Si une erreur inattendue se produit.
