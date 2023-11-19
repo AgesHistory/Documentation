@@ -15,6 +15,8 @@ Bienvenue dans la documentation de l'API de AgesHistory. Cette documentation fou
   - [Topic](./api/forums.md)
   - [Comment](./api/Comment.md)
   - [tag](./api/tag.md)
+
+- [Messages](./api/chat.md)
   ---
 
 **Websockets**
