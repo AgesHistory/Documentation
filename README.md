@@ -11,11 +11,10 @@ Bienvenue dans la documentation de l'API de AgesHistory. Cette documentation fou
   - [Follow](./api/Follow.md)
   - [Amis](./api/Relationship.md)
   
-- [Forums](./api/forums.md)
+- [Forums](./api/forum-features.md)
+  - [Topic](./api/forums.md)
+  - [Comment](./api/Comment.md)
   - [Tag](./api/tag.md)
-  - [Forum features](./api/forum-features.md)
-- [Comment](./api/Comment.md)
-  
   ---
 
 **Websockets**

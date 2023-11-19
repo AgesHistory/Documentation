@@ -93,87 +93,6 @@ Récupère un topic spécifié par son ID.
     - Code `404 Not Found` : Si le topic n'est pas trouvé.
     - Code `500 Internal Server Error` : Si une erreur inattendue se produit.
 
-## Récupérer les Topics
-
-Récupère les topics du forum.
-
-- **Méthode** : GET
-- **Endpoint** : `/topic`
-- **En-tête (Headers)** :
-  - `Authorization` : Token JWT de l'utilisateur connecté.
-
-- **Réponse en cas de succès** : Code `200 OK`
-
-  ```json
-  {
-    "success": true,
-    "message": "Topics récupérés avec succès.",
-    "topics": [
-      {
-        "_id": "ID_du_topic",
-        "name": "Nom_du_topic",
-        "description": "Description_du_topic",
-        "content": "Contenu_du_topic",
-        "likes": [],
-		"dislikes": [],
-		"share": [],
-		"views": "Nombre_de_vues_du_topic ( Number )",
-		"edited": "Boolean",
-		"comments": [
-			"ID_du_commentaire",
-			"ID_du_commentaire2"
-		],
-		"owner": "ID_du_propriétaire",
-		"createdAt": "timestamp",
-		"tags": ["test","salut"]
-      },
-      {...}
-    ]
-  }
-  ```
-- **Codes d'erreur** :
-    - Code `401 Unauthorized` : Si l'utilisateur n'est pas authentifié.
-    - Code `500 Internal Server Error` : Si une erreur inattendue se produit.
-
-## Récupérer les Topics d'un Utilisateur et via un Tag
-
-Récupère les topics d'un utilisateur spécifié par son ID.
-
-- **Méthode** : GET
-- **Endpoint** : `/topic/user/:id` ou `/topic/tag/:tag`
-- **En-tête (Headers)** :
-  - `Authorization` : Token JWT de l'utilisateur connecté.
-
-- **Réponse en cas de succès** : Code `200 OK`
-
-```json
-  {
-      "success": true,
-      "message": "Topics récupérés avec succès.",
-      "topics": [{
-          "_id": "ID_du_topic",
-          "name": "Nom_du_topic",
-          "description": "Description_du_topic",
-          "content": "Contenu_du_topic",
-          "likes": [],
-          "dislikes": [],
-          "share": [],
-          "views": "Nombre_de_vues_du_topic ( Number )",
-          "edited": "Boolean",
-          "comments": [
-              "ID_du_commentaire",
-              "ID_du_commentaire2"
-          ],
-          "owner": "ID_du_propriétaire",
-          "createdAt": "timestamp",
-          "tags": ["test", "salut"]
-      }]
-  }
-```
-- **Codes d'erreur** :
-    - Code `401 Unauthorized` : Si l'utilisateur n'est pas authentifié.
-    - Code `500 Internal Server Error` : Si une erreur inattendue se produit.
-
 
 ## Modifier un Topic
 
@@ -225,4 +144,201 @@ Modifie un topic spécifié par son ID.
     - Code `404 Not Found` : Si le topic n'est pas trouvé.
     - Code `500 Internal Server Error` : Si une erreur inattendue se produit.
 
-    
+## Récupérer les Topics d'un Utilisateur
+
+Récupère les topics d'un utilisateur spécifié par son ID.
+
+- **Méthode** : GET
+- **Endpoint** : `/topic/user/:id`
+- **En-tête (Headers)** :
+  - `Authorization` : Token JWT de l'utilisateur connecté.
+
+- **Réponse en cas de succès** : Code `200 OK`
+
+```json
+  {
+      "success": true,
+      "message": "Topics récupérés avec succès.",
+      "topics": [{
+          "_id": "ID_du_topic",
+          "name": "Nom_du_topic",
+          "description": "Description_du_topic",
+          "content": "Contenu_du_topic",
+          "likes": [],
+          "dislikes": [],
+          "share": [],
+          "views": "Nombre_de_vues_du_topic ( Number )",
+          "edited": "Boolean",
+          "comments": [
+              "ID_du_commentaire",
+              "ID_du_commentaire2"
+          ],
+          "owner": "ID_du_propriétaire",
+          "createdAt": "timestamp",
+          "tags": ["test", "salut"]
+      }]
+  }
+```
+- **Codes d'erreur** :
+    - Code `401 Unauthorized` : Si l'utilisateur n'est pas authentifié.
+    - Code `500 Internal Server Error` : Si une erreur inattendue se produit.
+
+
+## Liker/disliker/partager un topic
+
+Ces requêtes vous permettent de liker, disliker et partager un topic.
+
+- **Méthode** : POST
+- **Endpoint** : `/topic/:id/like` | `/topic/:id/dislike` | `/topic/:id/share`
+- **En-tête (Headers)** :
+  - `Authorization` : Token JWT de l'utilisateur connecté.
+
+- **Réponse en cas de succès** : Code `200 OK`
+
+Like/Dislike: 
+```json
+{
+	"code": 200,
+	"message": "You liked this topic" || "You disliked this topic"
+}
+```
+
+Share:
+```json
+{
+	"code": 200,
+	"message": {
+		"url": "http://localhost:8080/topic/7108873529478615040",
+		"topic": {
+			"_id": "7108873529478615040",
+			"name": "New Topic",
+			"description": "salut ceci est un nouveau topic",
+			"content": "Topic sur l'histoire de l'art",
+			"likes": [],
+			"dislikes": [
+				"7102951221928923136"
+			],
+			"share": [
+				"7102951221928923136"
+			],
+			"views": 3,
+			"tags": [],
+			"edited": true,
+			"comments": [
+				"7108883606893760512",
+				"7108883821117837312"
+			],
+			"owner": "7102951221928923136",
+			"createdAt": "2023-09-16T18:05:13.892Z",
+			"staffs": [
+				"7103141925003202560"
+			]
+		}
+	}
+}
+```
+
+- **Codes d'erreur** :
+    - Code `401 Unauthorized` : Si l'utilisateur n'est pas authentifié.
+    - Code `500 Internal Server Error` : Si une erreur inattendue se produit.
+
+
+## Ajouter un staff au topic
+
+Cette requête vous permet d'ajouter un modérateur à vôtre topic
+/!\ Vous devez être le fondateur du topic pour ajouter des modérateurs
+
+- **Méthode** : POST
+- **Endpoint** : `/topic/:topicID/:staffID`
+- **En-tête (Headers)** :
+  - `Authorization` : Token JWT de l'utilisateur connecté.
+
+- **Réponse en cas de succès** : Code `200 OK`
+
+```json
+{
+	"code": 200,
+	"message": {
+		"_id": "7108873529478615040",
+		"name": "New Topic",
+		"description": "salut ceci est un nouveau topic",
+		"content": "Topic sur l'histoire de l'art",
+		"likes": [],
+		"dislikes": [
+			"7102951221928923136"
+		],
+		"share": [
+			"7102951221928923136"
+		],
+		"views": 2,
+		"tags": [],
+		"edited": true,
+		"comments": [
+			"7108883606893760512",
+			"7108883821117837312"
+		],
+		"owner": "7102951221928923136",
+		"createdAt": "2023-09-16T18:05:13.892Z",
+		"staffs": [
+			"7103141925003202560",
+			"7102956217768611840"
+		]
+	}
+}
+```
+
+- **Codes d'erreur** :
+    - Code `401 Unauthorized` : Si l'utilisateur n'est pas authentifié.
+    - Code `403 Forbidden` : Si le modérateur l'est déjà.
+    - Code `404 no found` : Si le modérateur mentionné n'existe pas.
+    - Code `500 Internal Server Error` : Si une erreur inattendue se produit.
+
+## Supprimer un staff d'un topic
+
+Cette requête vous permet de supprimer un modérateur de vôtre topic
+/!\ Vous devez être le fondateur du topic pour ajouter des modérateurs
+
+- **Méthode** : DELETE
+- **Endpoint** : `/topic/:topicID/:staffID`
+- **En-tête (Headers)** :
+  - `Authorization` : Token JWT de l'utilisateur connecté.
+
+- **Réponse en cas de succès** : Code `200 OK`
+
+```json
+{
+	"code": 200,
+	"message": {
+		"_id": "7108873529478615040",
+		"name": "New Topic",
+		"description": "salut ceci est un nouveau topic",
+		"content": "Topic sur l'histoire de l'art",
+		"likes": [],
+		"dislikes": [
+			"7102951221928923136"
+		],
+		"share": [
+			"7102951221928923136"
+		],
+		"views": 2,
+		"tags": [],
+		"edited": true,
+		"comments": [
+			"7108883606893760512",
+			"7108883821117837312"
+		],
+		"owner": "7102951221928923136",
+		"createdAt": "2023-09-16T18:05:13.892Z",
+		"staffs": [
+			"7103141925003202560"
+		]
+	}
+}
+```
+
+- **Codes d'erreur** :
+    - Code `401 Unauthorized` : Si l'utilisateur n'est pas authentifié.
+    - Code `403 Forbidden` : Si la personne mentionnée n'est pas modérateur du topic.
+    - Code `404 no found` : Si le modérateur mentionné n'existe pas.
+    - Code `500 Internal Server Error` : Si une erreur inattendue se produit.
+
