@@ -7,8 +7,14 @@ Bienvenue dans la documentation de l'API de AgesHistory. Cette documentation fou
 `L'api Rest vous permet d'intéragir avec l'application en utilisant des requetes http`
 - [Authentification](./api/Auth.md)
 - [Utilisateurs](./api/Users.md)
-- [Amis](./api/Relationship.md)
+  - [Notifications](./api/Notification.md)
+  - [Follow](./api/Follow.md)
+  - [Amis](./api/Relationship.md)
+  
 - [Forums](./api/forums.md)
+  - [Tag](./api/tag.md)
+  - [Forum features](./api/forum-features.md)
+- [Comment](./api/Comment.md)
   
   ---
 

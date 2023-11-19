@@ -98,7 +98,7 @@ Récupère un topic spécifié par son ID.
 Récupère les topics du forum.
 
 - **Méthode** : GET
-- **Endpoint** : `/topics`
+- **Endpoint** : `/topic`
 - **En-tête (Headers)** :
   - `Authorization` : Token JWT de l'utilisateur connecté.
 
@@ -140,7 +140,7 @@ Récupère les topics du forum.
 Récupère les topics d'un utilisateur spécifié par son ID.
 
 - **Méthode** : GET
-- **Endpoint** : `/topics/user/:id` ou `/topics/tag/:tag`
+- **Endpoint** : `/topic/user/:id` ou `/topic/tag/:tag`
 - **En-tête (Headers)** :
   - `Authorization` : Token JWT de l'utilisateur connecté.
 
