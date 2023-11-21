@@ -86,7 +86,7 @@ Envoie un message à l'utilisateur mentionné.
 - **En-tête (Headers)** :
   - `authorization` : Token JWT de l'utilisateur connecté.
 
-- **Réponse en cas de succès** : Code `200 OK`
+- **Réponse en cas de succès** : Code `201 Created`
 
 ```json
 {
@@ -104,3 +104,55 @@ Envoie un message à l'utilisateur mentionné.
 ```
 - **Codes d'erreur** :
   - Code `401 Unauthorized` : Si l'utilisateur n'est pas authentifié.
+  - - Code `404 Not found` : Si l'utilisateur cible n'existe pas.
+
+## Modifier un message
+
+Modifie un de vos message dans un conversation cible.
+
+- **Méthode** : PATCH
+- **Endpoint** : `/messages/user/:UserId/:MessageId`
+- **En-tête (Headers)** :
+  - `authorization` : Token JWT de l'utilisateur connecté.
+
+- **Réponse en cas de succès** : Code `200 OK`
+
+```json
+{
+	"code": 200,
+	"message": {
+		"sender": "7103141925003202560",
+		"receiver": "7102956217768611840",
+		"content": "version modifié de mon message",
+		"edited": true,
+		"react": null,
+		"CreatedAt": "2023-11-19T21:56:45.077Z",
+		"_id": "7132126230911913984"
+	}
+}
+```
+- **Codes d'erreur** :
+  - Code `401 Unauthorized` : Si l'utilisateur n'est pas authentifié.
+  - Code `404 Not found` : Si la conversation n'existe pas ou que le message n'existe pas
+
+
+## Supprimer un message
+
+Supprime un de vos message dans une conversation mentionné.
+
+- **Méthode** : DELETE
+- **Endpoint** : `/messages/user/:UserId/:MessageId`
+- **En-tête (Headers)** :
+  - `authorization` : Token JWT de l'utilisateur connecté.
+
+- **Réponse en cas de succès** : Code `200 OK`
+
+```json
+{
+	"code": 200,
+	"message": "Message deleted!"
+}
+```
+- **Codes d'erreur** :
+  - Code `401 Unauthorized` : Si l'utilisateur n'est pas authentifié.
+  - Code `404 Not found` : Si la conversation n'existe pas ou que le message n'existe pas
