@@ -57,3 +57,6 @@ Permet à un utilisateur de se connecter.
 
   - Code `400 Bad Request` : Si les données fournies sont incorrectes.
   - Code `401 Conflict` : Si les informations de connexion sont incorrectes.
+  - Code `403 Forbidden`: Si l'email ou le mot de passe est invalid.
+  - Code `409 Conflit`: Si l'email ou le nom d'utilisateur est déjà associé à un compte.
+  - Code `500 Internal Server Error` : Si une erreur inattendue se produit.
