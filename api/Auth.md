@@ -28,6 +28,7 @@ Permet à un utilisateur de s'inscrire.
 - **Codes d'erreur** :
 
   - Code `400 Bad Request` : Si les données fournies sont incorrectes.
+  - Code `401 Unauthorized` : Si l'utilisateur n'est pas authentifié.
   - Code `409 Conflict` : Si l'utilisateur existe déjà.
 
 <br><br>
@@ -56,7 +57,7 @@ Permet à un utilisateur de se connecter.
 - **Codes d'erreur** :
 
   - Code `400 Bad Request` : Si les données fournies sont incorrectes.
-  - Code `401 Conflict` : Si les informations de connexion sont incorrectes.
-  - Code `403 Forbidden`: Si l'email ou le mot de passe est invalid.
+  - Code `401 Unauthorized` : Si l'utilisateur n'est pas authentifié.
+  - Code `403 Forbidden`: Si les informations de connexion sont incorrectes.
   - Code `409 Conflit`: Si l'email ou le nom d'utilisateur est déjà associé à un compte.
   - Code `500 Internal Server Error` : Si une erreur inattendue se produit.
