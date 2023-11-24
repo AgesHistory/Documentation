@@ -90,22 +90,24 @@ Récupère les demandes d'amis de l'utilisateur connecté.
 - **Réponse en cas de succès** : Code `200 OK`
   
   ```json
-  {
-    "requests": [
-      {
-        "id": "user_id",
-        "username": "john_doe",
-        "avatar": "avatar_url",
-        "CreatedAt": "timestamp"
-      },
-      {
-        "id": "user_id2",
-        "username": "john_doe2",
-        "avatar": "avatar_url2",
-        "CreatedAt": "timestamp2"
-      }
-    ]
-  }
+ {
+	"code": 200,
+	"message": {
+		"friends": [
+			{
+				"id": "7103141925003202560",
+				"username": "bob",
+				"type": 0,
+				"avatar": "7102951221928923136",
+				"followers": 0,
+				"following": 1,
+				"commonFriends": []
+			}
+		],
+		"friendRequests": [],
+		"friendRequestsSent": []
+	}
+}
   ```
   
 - **Codes d'erreur** :
