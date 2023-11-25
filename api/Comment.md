@@ -98,7 +98,7 @@ Récupère un commentaire spécifié par son ID.
 Récupère les commentaires d'un utilisateurs avec son id.
 
 - **Méthode** : GET
-- **Endpoint** : `/topic/:userId/comment`
+- **Endpoint** : `/topic/user/:userId/comment`
 - **En-tête (Headers)** :
   - `Authorization` : Token JWT de l'utilisateur connecté.
 
@@ -109,16 +109,8 @@ Récupère les commentaires d'un utilisateurs avec son id.
 	"code": 200,
 	"message": [
 		{
+			//info comment
 			"id": "7132071092000133120",
-			"author": {
-				"id": "7103141925003202560",
-				"username": "bob",
-				"avatar": "https://ageshistory.com/api/medias/avatar/7103141925003202560.png",
-				"badges": [],
-				"commonFriends": [
-					"7102956217768611840"
-				]
-			},
 			"content": "Hey ceci est un commentaire",
 			"likes": [],
 			"disklikes": [],
@@ -126,7 +118,13 @@ Récupère les commentaires d'un utilisateurs avec son id.
 				"7102951221928923136"
 			],
 			"edited": false,
-			"createdAt": "2023-11-19T18:24:15.808Z"
+			"createdAt": "2023-11-19T18:24:15.808Z",
+
+			//info topics
+			"topic_id": "7108873529478615040",
+			"topic_name": "New Topic",
+			"topic_description": "salut ceci est un nouveau topic",
+			"topic_icon": "none"
 		}
 	]
 }
