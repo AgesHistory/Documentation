@@ -93,6 +93,52 @@ Récupère un commentaire spécifié par son ID.
     - Code `500 Internal Server Error` : Si une erreur inattendue se produit.
 
 
+## Récupérer Les commentaires d'un utilisateur
+
+Récupère les commentaires d'un utilisateurs avec son id.
+
+- **Méthode** : GET
+- **Endpoint** : `/topic/:userId/comment`
+- **En-tête (Headers)** :
+  - `Authorization` : Token JWT de l'utilisateur connecté.
+
+- **Réponse en cas de succès** : Code `200 OK`
+
+```json
+{
+	"code": 200,
+	"message": [
+		{
+			"id": "7132071092000133120",
+			"author": {
+				"id": "7103141925003202560",
+				"username": "bob",
+				"avatar": "https://ageshistory.com/api/medias/avatar/7103141925003202560.png",
+				"badges": [],
+				"commonFriends": [
+					"7102956217768611840"
+				]
+			},
+			"content": "Hey ceci est un commentaire",
+			"likes": [],
+			"disklikes": [],
+			"share": [
+				"7102951221928923136"
+			],
+			"edited": false,
+			"createdAt": "2023-11-19T18:24:15.808Z"
+		}
+	]
+}
+```
+
+- **Codes d'erreur** :
+    - Code `401 Unauthorized` : Si l'utilisateur n'est pas authentifié.
+    - Code `404 Not Found` : Si le commentaire n'est pas trouvé.
+    - Code `500 Internal Server Error` : Si une erreur inattendue se produit.
+
+
+
 ## Modifier un Commentaire
 
 Modifie un commentaire spécifié par son ID.
