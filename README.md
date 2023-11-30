@@ -18,7 +18,7 @@ Bienvenue dans la documentation de l'API de AgesHistory. Cette documentation fou
 
 - [Messages](./api/chat.md)
 
-
+- [Events](./api/Events.md)
   ---
 
 **Websockets**
