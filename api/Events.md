@@ -9,7 +9,7 @@ Documentation des endpoints liés aux évenements sur AgesHistory.
 Permet à un utilisateur d'acceder à l'évenement calendrier de l'avent.
 
 - **Méthode** : GET
-- **Endpoint** : `events/noel`
+- **Endpoint** : `events/2023/noel`
 
 - **Réponse en cas de succès** : `Code 200 OK`
 ```js
@@ -48,7 +48,7 @@ Permet à un utilisateur d'acceder à l'évenement calendrier de l'avent.
 Permet de voir les informations de la case du calendrier mentionnée.
 
 - **Méthode** : GET
-- **Endpoint** : `events/noel/:day`
+- **Endpoint** : `events/2023/noel/:day`
 - **Réponse en cas de succès** : `Code 200 OK`
 ```js
 {
@@ -84,7 +84,7 @@ Permet de voir les informations de la case du calendrier mentionnée.
 Permet de récupérer une récompense de la case du calendrier mentionnée.
 
 - **Méthode** : GET
-- **Endpoint** : `events/noel/reward`
+- **Endpoint** : `events/2023/noel/reward`
 - **Réponse en cas de succès** : `Code 200 OK`
 - **En-tête (Headers)** :
   - `Authorization` : Token JWT de l'utilisateur connecté.
