@@ -119,5 +119,39 @@ Permet de récupérer une récompense de la case du calendrier mentionnée.
 - **Codes d'erreur** :
 
   - Code `400 Bad Request` : multiples raisons ( dites dans la réponse )
+  - Code `401 Unauthorized` : Si l'utilisateur n'est pas connecté ou que son token est invalide.
   - Code `404 not found`: si l'utilisateur n'existe pas.
   - Code `500 Internal Server Error` : Si une erreur inattendue se produit.
+
+## Accéder aux récompenses sur le compte
+
+Permet à un utilisateur d'acceder aux récompenses du gagnés sur le compte
+
+- **Méthode** : GET
+- **Endpoint** : `events/2023/noel/@me`
+- **En-tête (Headers)** :
+  - `Authorization` : Token JWT de l'utilisateur connecté.
+
+
+- **Réponse en cas de succès** : `Code 200 OK`
+```js
+{
+	"code": 200,
+	"message": {
+		"_id": "65678b286fa8a5e5a9a8f22b",
+		"username": "punchnox",
+		"id": "7102956217768611840",
+		"rewards": [
+			"mystère"
+		],
+		"__v": 0
+	}
+}
+```
+
+
+- **Codes d'erreur** :
+  - Code `401 Unauthorized` : Si l'utilisateur n'est pas connecté ou que son token est invalide.
+  - Code `500 Internal Server Error` : Erreur venant du backend.
+
+<br><br>
