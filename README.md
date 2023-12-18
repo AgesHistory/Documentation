@@ -10,6 +10,7 @@ Bienvenue dans la documentation de l'API de AgesHistory. Cette documentation fou
   - [Notifications](./api/Notification.md)
   - [Follow](./api/Follow.md)
   - [Amis](./api/relationship.md)
+  - [Devices](./api/devices.md)
   
 - [Forums](./api/forum-features.md)
   - [Topic](./api/forums.md)
@@ -19,6 +20,8 @@ Bienvenue dans la documentation de l'API de AgesHistory. Cette documentation fou
 - [Messages](./api/chat.md)
 
 - [Events](./api/Events.md)
+
+
   ---
 
 **Websockets**
