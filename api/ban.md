@@ -145,3 +145,57 @@ Bannit un utilisateur avec les informations fournies.
   - Code `400 Bad Request` : Si des informations manquantes ou incorrectes sont fournies.
   - Code `404 Not Found` : Si aucun utilisateur n'est trouvé pour l'identifiant fourni.
   - Code `500 Internal Server Error` : Si une erreur inattendue se produit.
+
+## Débannir un utilisateur
+
+Débannit un utilisateur avec les informations fournies.
+
+- **Méthode** : DELETE
+- **Endpoint** : `https://ageshistory.com/api/admin/users/ban/:id`
+- **En-tête (Headers)** :
+  - `authorization`:  Token JWT de l'utilisateur connecté.
+
+### Paramètres du Corps (Body)
+
+```json
+{
+	"reason": "Raison du bannissement.",
+	"expire": 86400
+}
+```
+
+- `reason`: La raison du bannissement (chaîne de caractères).
+- `expire`: La durée du bannissement en secondes (facultatif).
+
+### Paramètres de l'URL
+
+- `id`: L'identifiant de l'utilisateur à bannir.
+
+### Réponse en cas de succès
+
+- Code : `200 OK`
+
+```json
+{
+	"code": 200,
+	"message": {
+		"user": {
+			"id": 7103141925003203000,
+			"username": "bob",
+			"avatar": "https://ageshistory.com/api/medias/avatar/7103141925003202560.png"
+		},
+		"_id": "65a7c27f06603fafccaa583e",
+		"id": 7103141925003203000,
+		"reason": "Raison du bannissement.",
+		"admin": "punchnox",
+		"CreatedAt": "2024-01-16T18:19:17.177Z",
+		"__v": 0
+	}
+}
+```
+
+- Codes d'erreur
+  - Code `401 Unauthorized` : Authorization invalide.
+  - Code `400 Bad Request` : Si des informations manquantes ou incorrectes sont fournies.
+  - Code `404 Not Found` : Si aucun utilisateur n'est trouvé pour l'identifiant fourni.
+  - Code `500 Internal Server Error` : Si une erreur inattendue se produit.
