@@ -7,7 +7,7 @@ Cette catégorie contient les informations générales, les tendances, la recher
 Récupère les topics du forum.
 
 - **Méthode** : GET
-- **Endpoint** : `/topic`
+- **Endpoint** : `https://ageshistory.com/api/topic`
 - **En-tête (Headers)** :
   - `Authorization` : Token JWT de l'utilisateur connecté.
 - **Query**:
@@ -53,7 +53,7 @@ Récupère les topics du forum.
 Récupère les tendances
 
 - **Méthode** : GET
-- **Endpoint** : `/topic/tendance`
+- **Endpoint** : `https://ageshistory.com/api/topic/tendance`
 - **En-tête (Headers)** :
   - `no content`
 - **Query**:

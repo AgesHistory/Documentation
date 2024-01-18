@@ -3,7 +3,7 @@
 Crée un nouveau commentaire sur un topic cible.
 
 - **Méthode** : POST
-- **Endpoint** : `/topic/:id`
+- **Endpoint** : `https://ageshistory.com/api/topic/:id`
 - **En-tête (Headers)** :
   - `Authorization` : Token JWT de l'utilisateur connecté.
 
@@ -42,7 +42,7 @@ Crée un nouveau commentaire sur un topic cible.
 Supprime un commentaire spécifié par son ID.
 
 - **Méthode** : DELETE
-- **Endpoint** : `/topic/:Topicid/:commentid`
+- **Endpoint** : `https://ageshistory.com/api/topic/:Topicid/:commentid`
 - **En-tête (Headers)** :
   - `Authorization` : Token JWT de l'utilisateur connecté.
 
@@ -65,7 +65,7 @@ Supprime un commentaire spécifié par son ID.
 Récupère un commentaire spécifié par son ID.
 
 - **Méthode** : GET
-- **Endpoint** : `/topic/:Topicid/:Commentid`
+- **Endpoint** : `https://ageshistory.com/api/topic/:Topicid/:Commentid`
 - **En-tête (Headers)** :
   - `Authorization` : Token JWT de l'utilisateur connecté.
 
@@ -142,7 +142,7 @@ Récupère les commentaires d'un utilisateurs avec son id.
 Modifie un commentaire spécifié par son ID.
 
 - **Méthode** : PUT
-- **Endpoint** : `/topic/:Topicid/:Commentid`
+- **Endpoint** : `https://ageshistory.com/api/topic/:Topicid/:Commentid`
 - **En-tête (Headers)** :
   - `Authorization` : Token JWT de l'utilisateur connecté.
 

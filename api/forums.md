@@ -3,7 +3,7 @@
 Crée un nouveau topic sur le forum.
 
 - **Méthode** : POST
-- **Endpoint** : `/topic/create`
+- **Endpoint** : `https://ageshistory.com/api/topic/create`
 - **En-tête (Headers)** :
   - `Authorization` : Token JWT de l'utilisateur connecté.
 
@@ -45,7 +45,7 @@ Crée un nouveau topic sur le forum.
 Supprime un topic spécifié par son ID.
 
 - **Méthode** : DELETE
-- **Endpoint** : `/topic/delete/:id`
+- **Endpoint** : `https://ageshistory.com/api/topic/:id`
 - **En-tête (Headers)** :
   - `Authorization` : Token JWT de l'utilisateur connecté.
 
@@ -68,7 +68,7 @@ Supprime un topic spécifié par son ID.
 Récupère un topic spécifié par son ID.
 
 - **Méthode** : GET
-- **Endpoint** : `/topic/:id`
+- **Endpoint** : `https://ageshistory.com/api/topic/:id`
 - **En-tête (Headers)** :
   - `Authorization` : Token JWT de l'utilisateur connecté.
 
@@ -99,7 +99,7 @@ Récupère un topic spécifié par son ID.
 Modifie un topic spécifié par son ID.
 
 - **Méthode** : PUT
-- **Endpoint** : `/topic/:id`
+- **Endpoint** : `https://ageshistory.com/api/topic/:id`
 - **En-tête (Headers)** :
   - `Authorization` : Token JWT de l'utilisateur connecté.
 
@@ -189,7 +189,7 @@ Récupère les topics d'un utilisateur spécifié par son ID.
 Ces requêtes vous permettent de liker, disliker et partager un topic.
 
 - **Méthode** : POST
-- **Endpoint** : `/topic/:id/like` | `/topic/:id/dislike` | `/topic/:id/share`
+- **Endpoint** : `https://ageshistory.com/api/topic/:id/like` | `https://ageshistory.com/api/topic/:id/dislike` | `https://ageshistory.com/api/topic/:id/share`
 - **En-tête (Headers)** :
   - `Authorization` : Token JWT de l'utilisateur connecté.
 
@@ -249,7 +249,7 @@ Cette requête vous permet d'ajouter un modérateur à vôtre topic
 /!\ Vous devez être le fondateur du topic pour ajouter des modérateurs
 
 - **Méthode** : POST
-- **Endpoint** : `/topic/:topicID/:staffID`
+- **Endpoint** : `https://ageshistory.com/api/topic/:topicID/:staffID`
 - **En-tête (Headers)** :
   - `Authorization` : Token JWT de l'utilisateur connecté.
 
@@ -299,7 +299,7 @@ Cette requête vous permet de supprimer un modérateur de vôtre topic
 /!\ Vous devez être le fondateur du topic pour ajouter des modérateurs
 
 - **Méthode** : DELETE
-- **Endpoint** : `/topic/:topicID/:staffID`
+- **Endpoint** : `https://ageshistory.com/api/topic/:topicID/:staffID`
 - **En-tête (Headers)** :
   - `Authorization` : Token JWT de l'utilisateur connecté.
 

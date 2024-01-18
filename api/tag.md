@@ -6,7 +6,7 @@ Les tags vous permettent de trouver des topics plus facilement, les ordonner dan
 Récupère toutes les catégories et leurs spécificités.
 
 - **Méthode** : GET
-- **Endpoint** : `/topic/categories`
+- **Endpoint** : `https://ageshistory.com/api/topic/categories`
 - **En-tête (Headers)** :
   - `no content`
 
@@ -43,7 +43,7 @@ Récupère toutes les catégories et leurs spécificités.
 Récupère tout les tags et leurs spécificités.
 
 - **Méthode** : GET
-- **Endpoint** : `/topic/tag`
+- **Endpoint** : `https://ageshistory.com/api/topic/tag`
 - **En-tête (Headers)** :
   - `no content`
 
@@ -106,7 +106,7 @@ Récupère tout les tags et leurs spécificités.
 Vous permet de créer un tag et le proposer à toute la communauté.
 
 - **Méthode** : POST
-- **Endpoint** : `/topic/tag/`
+- **Endpoint** : `https://ageshistory.com/api/topic/tag/`
 - **En-tête (Headers)** :
   - `no content`
 
@@ -179,7 +179,7 @@ Permet de supprimer un tag et de le retirer de chaque topics le contenant.
 Récupère les topics contenant un tag spécifié.
 
 - **Méthode** : GET
-- **Endpoint** : `/topic/tag/:nom`
+- **Endpoint** : `https://ageshistory.com/api/topic/tag/:nom`
 - **En-tête (Headers)** :
   - `Authorization` : Token JWT de l'utilisateur connecté.
 
