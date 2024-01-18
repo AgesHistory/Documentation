@@ -5,24 +5,28 @@ Bienvenue dans la documentation de l'API de AgesHistory. Cette documentation fou
 **API Rest**
 
 `L'api Rest vous permet d'intéragir avec l'application en utilisant des requetes http`
-- [Authentification](./api/Auth.md)
-- [Utilisateurs](./api/Users.md)
-  - [Notifications](./api/Notification.md)
-  - [Follow](./api/Follow.md)
-  - [Amis](./api/relationship.md)
-  - [Devices](./api/devices.md)
+- [Authentification](./api/auth/Auth.md)
+- [Utilisateurs](./api/users/Users.md)
+  - [Notifications](./api/users/Notification.md)
+  - [Follow](./api/users/Follow.md)
+  - [Amis](./api/users/relationship.md)
+  - [Devices](./api/users/devices.md)
   
-- [Forums](./api/forum-features.md)
-  - [Topic](./api/forums.md)
-  - [Comment](./api/Comment.md)
-  - [tag](./api/tag.md)
+- [Forums](./api/forum/forum-features.md)
+  - [Topic](./api/forum/forums.md)
+  - [Comment](./api/forum/Comment.md)
+  - [tag](./api/forum/tag.md)
 
-- [Messages](./api/chat.md)
+- [Messages](./api/messages/index.md)
 
-- [Admin](./api/admin.md)
-    - [Bannissements](./api/ban.md)
+- [Admin](./api/admin/index.md)
+    - [Bannissements](./api/admin/ban.md)
+    - [Signalements](./api/admin/reports.md)
+    - [Avertissements](./api/admin/warm.md)
+    - [Sanctions](./api/admin/mute.md)
+    - [Permissions](./api/admin/permissions.md)
 
-- [Events](./api/Events.md)
+- [Events](./api/events/noel2023.md)
 
 
   ---
