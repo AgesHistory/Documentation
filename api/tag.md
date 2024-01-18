@@ -181,7 +181,7 @@ Récupère les topics contenant un tag spécifié.
 - **Méthode** : GET
 - **Endpoint** : `https://ageshistory.com/api/topic/tag/:nom`
 - **En-tête (Headers)** :
-  - `Authorization` : Token JWT de l'utilisateur connecté.
+  - `authorization` : Token JWT de l'utilisateur connecté.
 
 - **Réponse en cas de succès** : Code `200 OK`
 

@@ -9,7 +9,7 @@ Récupère les topics du forum.
 - **Méthode** : GET
 - **Endpoint** : `https://ageshistory.com/api/topic`
 - **En-tête (Headers)** :
-  - `Authorization` : Token JWT de l'utilisateur connecté.
+  - `authorization` : Token JWT de l'utilisateur connecté.
 - **Query**:
   - `start`: à partir de quel topic commencer à les récupérer
   - `end`: à partir de quel topic arreter de les récupérer
@@ -129,7 +129,7 @@ Récupère les topics contenant les lettres inclues dans la recherche.
 - **Méthode** : GET
 - **Endpoint** : `/topic/search/:text`
 - **En-tête (Headers)** :
-  - `Authorization` : Token JWT de l'utilisateur connecté.
+  - `authorization` : Token JWT de l'utilisateur connecté.
 
 - **Réponse en cas de succès** : Code `200 OK`
 

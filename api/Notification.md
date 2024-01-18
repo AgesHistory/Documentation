@@ -9,7 +9,7 @@ Récupère la liste de notifications de l'utilisateur actuellement connecté.
 - **Méthode** : GET
 - **Endpoint** : `/identity/@me/notifications`
 - **En-tête (Headers)** :
-  - `Authorization` : Token JWT de l'utilisateur connecté.
+  - `authorization` : Token JWT de l'utilisateur connecté.
 
 - **Réponse en cas de succès** : Code `200 OK`
 
@@ -45,7 +45,7 @@ Récupère une notification lié à vôtre compte actuellement connecté
 - **Méthode** : GET
 - **Endpoint** : `/identity/@me/notifications/:id`
 - **En-tête (Headers)** :
-  - `Authorization` : Token JWT de l'utilisateur connecté.
+  - `authorization` : Token JWT de l'utilisateur connecté.
 
 - **Réponse en cas de succès** : Code `200 OK`
 

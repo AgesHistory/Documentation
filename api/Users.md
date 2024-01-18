@@ -9,7 +9,7 @@ Récupère le profil de l'utilisateur actuellement connecté.
 - **Méthode** : GET
 - **Endpoint** : `/identity/@me`
 - **En-tête (Headers)** :
-  - `Authorization` : Token JWT de l'utilisateur connecté.
+  - `authorization` : Token JWT de l'utilisateur connecté.
 
 - **Réponse en cas de succès** : Code `200 OK`
 
@@ -40,7 +40,7 @@ Récupère le profil d'un utilisateur spécifié par son nom d'utilisateur ou so
 - **Méthode** : GET
 - **Endpoint** : `/identity/@:username` ou `/identity/@:ID`
 - **En-tête (Headers)** :
-  - `Authorization` : Token JWT de l'utilisateur connecté.
+  - `authorization` : Token JWT de l'utilisateur connecté.
 
 - **Réponse en cas de succès** : Code `200 OK`
 

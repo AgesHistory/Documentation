@@ -87,7 +87,7 @@ Permet de récupérer une récompense de la case du calendrier mentionnée.
 - **Endpoint** : `events/2023/noel/reward`
 - **Réponse en cas de succès** : `Code 200 OK`
 - **En-tête (Headers)** :
-  - `Authorization` : Token JWT de l'utilisateur connecté.
+  - `authorization` : Token JWT de l'utilisateur connecté.
 
 ```js
 {
@@ -130,7 +130,7 @@ Permet à un utilisateur d'acceder aux récompenses du gagnés sur le compte
 - **Méthode** : GET
 - **Endpoint** : `events/2023/noel/@me`
 - **En-tête (Headers)** :
-  - `Authorization` : Token JWT de l'utilisateur connecté.
+  - `authorization` : Token JWT de l'utilisateur connecté.
 
 
 - **Réponse en cas de succès** : `Code 200 OK`

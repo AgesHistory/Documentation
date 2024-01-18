@@ -5,7 +5,7 @@ Crée un nouveau topic sur le forum.
 - **Méthode** : POST
 - **Endpoint** : `https://ageshistory.com/api/topic/create`
 - **En-tête (Headers)** :
-  - `Authorization` : Token JWT de l'utilisateur connecté.
+  - `authorization` : Token JWT de l'utilisateur connecté.
 
 ## Paramètres du Corps (Body)
 
@@ -47,7 +47,7 @@ Supprime un topic spécifié par son ID.
 - **Méthode** : DELETE
 - **Endpoint** : `https://ageshistory.com/api/topic/:id`
 - **En-tête (Headers)** :
-  - `Authorization` : Token JWT de l'utilisateur connecté.
+  - `authorization` : Token JWT de l'utilisateur connecté.
 
 - **Réponse en cas de succès** : Code `200 OK`
 
@@ -70,7 +70,7 @@ Récupère un topic spécifié par son ID.
 - **Méthode** : GET
 - **Endpoint** : `https://ageshistory.com/api/topic/:id`
 - **En-tête (Headers)** :
-  - `Authorization` : Token JWT de l'utilisateur connecté.
+  - `authorization` : Token JWT de l'utilisateur connecté.
 
 - **Réponse en cas de succès** : Code `200 OK`
 
@@ -101,7 +101,7 @@ Modifie un topic spécifié par son ID.
 - **Méthode** : PUT
 - **Endpoint** : `https://ageshistory.com/api/topic/:id`
 - **En-tête (Headers)** :
-  - `Authorization` : Token JWT de l'utilisateur connecté.
+  - `authorization` : Token JWT de l'utilisateur connecté.
 
 ## Paramètres du Corps (Body)
 
@@ -151,7 +151,7 @@ Récupère les topics d'un utilisateur spécifié par son ID.
 - **Méthode** : GET
 - **Endpoint** : `/topic/user/:id`
 - **En-tête (Headers)** :
-  - `Authorization` : Token JWT de l'utilisateur connecté.
+  - `authorization` : Token JWT de l'utilisateur connecté.
 
 - **Réponse en cas de succès** : Code `200 OK`
 
@@ -191,7 +191,7 @@ Ces requêtes vous permettent de liker, disliker et partager un topic.
 - **Méthode** : POST
 - **Endpoint** : `https://ageshistory.com/api/topic/:id/like` | `https://ageshistory.com/api/topic/:id/dislike` | `https://ageshistory.com/api/topic/:id/share`
 - **En-tête (Headers)** :
-  - `Authorization` : Token JWT de l'utilisateur connecté.
+  - `authorization` : Token JWT de l'utilisateur connecté.
 
 - **Réponse en cas de succès** : Code `200 OK`
 
@@ -251,7 +251,7 @@ Cette requête vous permet d'ajouter un modérateur à vôtre topic
 - **Méthode** : POST
 - **Endpoint** : `https://ageshistory.com/api/topic/:topicID/:staffID`
 - **En-tête (Headers)** :
-  - `Authorization` : Token JWT de l'utilisateur connecté.
+  - `authorization` : Token JWT de l'utilisateur connecté.
 
 - **Réponse en cas de succès** : Code `200 OK`
 
@@ -301,7 +301,7 @@ Cette requête vous permet de supprimer un modérateur de vôtre topic
 - **Méthode** : DELETE
 - **Endpoint** : `https://ageshistory.com/api/topic/:topicID/:staffID`
 - **En-tête (Headers)** :
-  - `Authorization` : Token JWT de l'utilisateur connecté.
+  - `authorization` : Token JWT de l'utilisateur connecté.
 
 - **Réponse en cas de succès** : Code `200 OK`
 

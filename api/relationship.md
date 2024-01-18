@@ -9,7 +9,7 @@ Envoie une demande d'ami à un utilisateur spécifié.
 - **Méthode** : POST
 - **Endpoint** : `/user/relationships/:id`
 - **En-tête (Headers)** :
-  - `Authorization` : Token JWT de l'utilisateur connecté.
+  - `authorization` : Token JWT de l'utilisateur connecté.
 
 - **Réponse en cas de succès** : Code `200 OK`
 
@@ -33,7 +33,7 @@ Accepte une demande d'ami d'un utilisateur spécifié.
 - **Méthode** : PATCH
 - **Endpoint** : `/identity/@me/relationships/:id`
 - **En-tête (Headers)** :
-  - `Authorization` : Token JWT de l'utilisateur connecté.
+  - `authorization` : Token JWT de l'utilisateur connecté.
 
 - **Réponse en cas de succès** : Code `200 OK`
   
@@ -57,7 +57,7 @@ Refuse une demande d'ami d'un utilisateur spécifié.
 - **Méthode** : DELETE
 - **Endpoint** : `/identity/@me/relationships/:id`
 - **En-tête (Headers)** :
-  - `Authorization` : Token JWT de l'utilisateur connecté.
+  - `authorization` : Token JWT de l'utilisateur connecté.
 
 - **Réponse en cas de succès** : Code `200 OK`
   
@@ -85,7 +85,7 @@ Récupère les demandes d'amis de l'utilisateur connecté.
 - **Méthode** : GET
 - **Endpoint** : `/identity/@me/relationships`
 - **En-tête (Headers)** :
-  - `Authorization` : Token JWT de l'utilisateur connecté.
+  - `authorization` : Token JWT de l'utilisateur connecté.
 
 - **Réponse en cas de succès** : Code `200 OK`
   

@@ -9,7 +9,7 @@ Récupère la liste de tout les appareils connectés au compte de l'utilisateur 
 - **Méthode** : GET
 - **Endpoint** : `/identity/@me/devices`
 - **En-tête (Headers)** :
-  - `Authorization` : Token JWT de l'utilisateur connecté.
+  - `authorization` : Token JWT de l'utilisateur connecté.
 
 ### Paramètres du Corps (Body)
 `no data`
@@ -50,7 +50,7 @@ Vous avez la possibilité d'ajouter des adresses Ip dans la liste noire de votre
 - **Méthode** : POST
 - **Endpoint** : `/identity/@me/devices/blacklist`
 - **En-tête (Headers)** :
-  - `Authorization` : Token JWT de l'utilisateur connecté.
+  - `authorization` : Token JWT de l'utilisateur connecté.
 
 ### Paramètres du Corps (Body)
 
@@ -80,7 +80,7 @@ Retire l'adresse ip mentionné dans la requête de la liste noire.
 - **Méthode** : DELETE
 - **Endpoint** : `/identity/@me/devices/blacklist`
 - **En-tête (Headers)** :
-  - `Authorization` : Token JWT de l'utilisateur connecté.
+  - `authorization` : Token JWT de l'utilisateur connecté.
 
 ### Paramètres du Corps (Body)
 

@@ -9,7 +9,7 @@ Récupère la liste des utilisateurs suivis et en attente de d'abonnement.
 - **Méthode** : GET
 - **Endpoint** : `/identity/@me/follow`
 - **En-tête (Headers)** :
-  - `Authorization` : Token JWT de l'utilisateur connecté.
+  - `authorization` : Token JWT de l'utilisateur connecté.
 
 - **Réponse en cas de succès** : Code `200 OK`
 
@@ -33,7 +33,7 @@ Ajoute ou envoie une demande d'abonnement à l'utilisateur cible.
 - **Méthode** : POST
 - **Endpoint** : `/identity/@me/follow/:id`
 - **En-tête (Headers)** :
-  - `Authorization` : Token JWT de l'utilisateur connecté.
+  - `authorization` : Token JWT de l'utilisateur connecté.
 
 - **Réponse en cas de succès** : Code `200 OK`
 
@@ -55,7 +55,7 @@ Supprime l'abonnement à un utilisateur.
 - **Méthode** : DELETE
 - **Endpoint** : `/identity/@me/follow/:id`
 - **En-tête (Headers)** :
-  - `Authorization` : Token JWT de l'utilisateur connecté.
+  - `authorization` : Token JWT de l'utilisateur connecté.
 
 - **Réponse en cas de succès** : Code `200 OK`
 

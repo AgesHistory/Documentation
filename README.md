@@ -20,6 +20,7 @@ Bienvenue dans la documentation de l'API de AgesHistory. Cette documentation fou
 - [Messages](./api/chat.md)
 
 - [Admin](./api/admin.md)
+    - [Bannissements](./api/ban.md)
 
 - [Events](./api/Events.md)
 

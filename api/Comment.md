@@ -5,7 +5,7 @@ Crée un nouveau commentaire sur un topic cible.
 - **Méthode** : POST
 - **Endpoint** : `https://ageshistory.com/api/topic/:id`
 - **En-tête (Headers)** :
-  - `Authorization` : Token JWT de l'utilisateur connecté.
+  - `authorization` : Token JWT de l'utilisateur connecté.
 
 ## Paramètres du Corps (Body)
 - **`content`** (obligatoire) : Le contenu du topic.
@@ -44,7 +44,7 @@ Supprime un commentaire spécifié par son ID.
 - **Méthode** : DELETE
 - **Endpoint** : `https://ageshistory.com/api/topic/:Topicid/:commentid`
 - **En-tête (Headers)** :
-  - `Authorization` : Token JWT de l'utilisateur connecté.
+  - `authorization` : Token JWT de l'utilisateur connecté.
 
 - **Réponse en cas de succès** : Code `200 OK`
 
@@ -67,7 +67,7 @@ Récupère un commentaire spécifié par son ID.
 - **Méthode** : GET
 - **Endpoint** : `https://ageshistory.com/api/topic/:Topicid/:Commentid`
 - **En-tête (Headers)** :
-  - `Authorization` : Token JWT de l'utilisateur connecté.
+  - `authorization` : Token JWT de l'utilisateur connecté.
 
 - **Réponse en cas de succès** : Code `200 OK`
 
@@ -100,7 +100,7 @@ Récupère les commentaires d'un utilisateurs avec son id.
 - **Méthode** : GET
 - **Endpoint** : `/topic/user/:userId/comment`
 - **En-tête (Headers)** :
-  - `Authorization` : Token JWT de l'utilisateur connecté.
+  - `authorization` : Token JWT de l'utilisateur connecté.
 
 - **Réponse en cas de succès** : Code `200 OK`
 
@@ -144,7 +144,7 @@ Modifie un commentaire spécifié par son ID.
 - **Méthode** : PUT
 - **Endpoint** : `https://ageshistory.com/api/topic/:Topicid/:Commentid`
 - **En-tête (Headers)** :
-  - `Authorization` : Token JWT de l'utilisateur connecté.
+  - `authorization` : Token JWT de l'utilisateur connecté.
 
 ## Paramètres du Corps (Body)
 - **`content`** : Le contenu du topic (facultatif).
@@ -184,7 +184,7 @@ Ces requêtes vous permettent de liker, disliker et partager un commentaire.
 - **Méthode** : POST
 - **Endpoint** : `/topic/:Topicid/:Commentid/like` | `/topic/:Topicid/:Commentid/dislike` | `/topic/:Topicid/:Commentid/share`
 - **En-tête (Headers)** :
-  - `Authorization` : Token JWT de l'utilisateur connecté.
+  - `authorization` : Token JWT de l'utilisateur connecté.
 
 - **Réponse en cas de succès** : Code `200 OK`
 
