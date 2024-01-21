@@ -145,7 +145,7 @@ Affiche les informations d'un signalement en particulier.
 `no data`
 
 ### Paramètres de l'URL
-- `id`: L'identifiant du signalement à supprimer
+- `id`: L'identifiant du signalement.
 
 ### Réponse en cas de succès
 
@@ -180,7 +180,7 @@ Affiche les informations d'un signalement en particulier.
 
 Supprime un signalement avec l'id fournit dans la requête.
 
-- **Méthode** : POST
+- **Méthode** : DELETE
 - **Endpoint** : `https://ageshistory.com/api/admin/reports/:id`
 - **En-tête (Headers)** :
   - `authorization`:  Token JWT de l'utilisateur connecté.
@@ -252,37 +252,3 @@ Affiche tout les signalements qu'un utilisateur à son encontre.
   - Code `401 Unauthorized` : Authorization invalide ou permissions manquantes.
   - Code `404 Not Found` : Si l'id de l'utilisateur n'existe pas.
   - Code `500 Internal Server Error` : Si une erreur inattendue se produit.
-
-
-
-## Supprimer un signalement
-
-Supprime un signalement avec l'id fournit dans la requête.
-
-- **Méthode** : POST
-- **Endpoint** : `https://ageshistory.com/api/admin/reports/:id`
-- **En-tête (Headers)** :
-  - `authorization`:  Token JWT de l'utilisateur connecté.
-
-### Paramètres du Corps (Body)
-`no data`
-
-### Paramètres de l'URL
-- `id`: L'identifiant du signalement à supprimer
-
-### Réponse en cas de succès
-
-- Code : `200 OK`
-
-```json
-{
-	"code": 200,
-	"message": "Report deleted"
-}
-```
-
-- Codes d'erreur
-  - Code `401 Unauthorized` : Authorization invalide.
-  - Code `404 Not Found` : Si l'id du signalement n'existe pas.
-  - Code `500 Internal Server Error` : Si une erreur inattendue se produit.
-
