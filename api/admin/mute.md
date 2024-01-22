@@ -1,6 +1,8 @@
 # Sanctions ( mute )
 Documentation des routes administratives concernants les sanctions, seuls les utilisateurs ayant les permissions requises auront accès à ces fonctionnalités.
 
+---
+
 ## Afficher si on a été sanctionné ( mute )
 
 Permet de voir si vous avez reçu un mute ( disponible aux membres ) et si oui pour quelle raison.
@@ -38,6 +40,7 @@ Permet de voir si vous avez reçu un mute ( disponible aux membres ) et si oui p
   - Code `404 Not Found` : Si l'utilisateur n'a pas de sanction.
   - Code `500 Internal Server Error` : Si une erreur inattendue se produit.
 
+---
 
 ## Afficher les tout les sanctions
 
@@ -88,6 +91,7 @@ Récupère tout les sanctions et leurs informations.
   - Code `401 Unauthorized` : Authorization invalide ou permissions manquantes.
   - Code `500 Internal Server Error` : Si une erreur inattendue se produit.
 
+---
 
 ## Créer une sanction
 
@@ -132,6 +136,7 @@ Fait une sanction à l'adiministration de ageshistory.
   - Code `400 Bad Request` : Si des paramètres du corps (Body) sont manquant ou que l'utilisateur est déjà mute.
   - Code `500 Internal Server Error` : Si une erreur inattendue se produit.
 
+---
 
 ## Afficher une sanction mentionné
 
@@ -173,7 +178,7 @@ Affiche les informations d'une sanction en particulier.
   - Code `404 Not Found` : Si l'id de l'utilisateur n'existe pas.
   - Code `500 Internal Server Error` : Si une erreur inattendue se produit.
 
-
+---
 
 ## Supprimer une sanction
 
@@ -216,7 +221,7 @@ Supprime une sanction avec l'id fournit dans la requête.
   - Code `404 Not Found` : Si l'id de l'utilisateur n'existe pas.
   - Code `500 Internal Server Error` : Si une erreur inattendue se produit.
 
-
+---
 
 ## Afficher les sanctions d'un utilisateur mentionné
 
