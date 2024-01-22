@@ -1,6 +1,44 @@
 # Sanctions ( mute )
 Documentation des routes administratives concernants les sanctions, seuls les utilisateurs ayant les permissions requises auront accès à ces fonctionnalités.
 
+## Afficher si on a été sanctionné ( mute )
+
+Permet de voir si vous avez reçu un mute ( disponible aux membres ) et si oui pour quelle raison.
+
+- **Méthode** : GET
+- **Endpoint** : `https://ageshistory.com/api/admin/mute/user/@me`
+- **En-tête (Headers)** :
+  - `authorization`:  Token JWT de l'utilisateur connecté.
+
+### Paramètres du Corps (Body)
+`no data`
+
+### Réponse en cas de succès
+
+- Code : `200 OK`
+
+```json
+{
+	"code": 200,
+	"message": {
+		"user": {
+			"id": "7102956217768611840",
+			"username": "punchnox",
+			"avatar": "https://ageshistory.com/api/medias/avatar/7102951221928923136.png"
+		},
+		"_id": "7102956217768611840",
+		"reason": "Spam pub en message privé ",
+		"admin": "punchnox",
+		"CreatedAt": "2024-01-21T21:46:10.743Z"
+	}
+}
+```
+- Codes d'erreur
+  - Code `401 Unauthorized` : Authorization invalide ou permissions manquantes.
+  - Code `404 Not Found` : Si l'utilisateur n'a pas de sanction.
+  - Code `500 Internal Server Error` : Si une erreur inattendue se produit.
+
+
 ## Afficher les tout les sanctions
 
 Récupère tout les sanctions et leurs informations.
@@ -218,41 +256,4 @@ Affiche tout si un utilisateur a été sanctionné, et si oui les informations d
 - Codes d'erreur
   - Code `401 Unauthorized` : Authorization invalide ou permissions manquantes.
   - Code `404 Not Found` : Si l'id de l'utilisateur n'existe pas.
-  - Code `500 Internal Server Error` : Si une erreur inattendue se produit.
-
-## Afficher si on a été sanctionné ( mute )
-
-Permet de voir si vous avez reçu un mute ( disponible aux membres ) et si oui pour quelle raison.
-
-- **Méthode** : GET
-- **Endpoint** : `https://ageshistory.com/api/admin/mute/user/:id`
-- **En-tête (Headers)** :
-  - `authorization`:  Token JWT de l'utilisateur connecté.
-
-### Paramètres du Corps (Body)
-`no data`
-
-### Réponse en cas de succès
-
-- Code : `200 OK`
-
-```json
-{
-	"code": 200,
-	"message": {
-		"user": {
-			"id": "7102956217768611840",
-			"username": "punchnox",
-			"avatar": "https://ageshistory.com/api/medias/avatar/7102951221928923136.png"
-		},
-		"_id": "7102956217768611840",
-		"reason": "Spam pub en message privé ",
-		"admin": "punchnox",
-		"CreatedAt": "2024-01-21T21:46:10.743Z"
-	}
-}
-```
-- Codes d'erreur
-  - Code `401 Unauthorized` : Authorization invalide ou permissions manquantes.
-  - Code `404 Not Found` : Si l'utilisateur n'a pas de sanction.
   - Code `500 Internal Server Error` : Si une erreur inattendue se produit.
