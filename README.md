@@ -17,7 +17,7 @@ Bienvenue dans la documentation de l'API de AgesHistory. Cette documentation fou
   - [Comment](./api/forum/Comment.md)
   - [tag](./api/forum/tag.md)
 
-- [Messages](./api/messages/index.md)
+- [Messages](./api/chat/index.md)
 
 - [Admin](./api/admin/index.md)
     - [Bannissements](./api/admin/ban.md)
